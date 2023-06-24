@@ -7,8 +7,8 @@ int main() {
     while (std::getline(std::cin, calcsStr)) {
         if (calcsStr == "") {
             maxElfCals = std::max<int>(currentElfCals, maxElfCals);
-            currentElfCals = 0;
             std::cout << maxElfCals << std::endl;
+            currentElfCals = 0;
             continue;
         }
         currentElfCals += std::stoi(calcsStr);
