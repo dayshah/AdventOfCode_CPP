@@ -9,14 +9,7 @@ int main() {
     std::vector<int> tripleMax(3, 0);
     while (std::getline(std::cin, calcsStr)) {
         if (calcsStr == "answer") {
-            int result = std::accumulate(
-                tripleMax.begin(),
-                tripleMax.end(),
-                0,
-                [](const int& a, const int& b){
-                    return a + b;
-                }
-            );
+            int result = std::accumulate(tripleMax.begin(), tripleMax.end(), 0);
             std::cout << result << std::endl;
         } else if (calcsStr == "") {
             if (currentElfCals > tripleMax[2]){
